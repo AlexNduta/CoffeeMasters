@@ -35,30 +35,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    messageCard(msg = Message("Alex", "Wutang"))
 
                 }
             }
         }
     }
-}
-
-
-data class Message(val author:String, val body:String)
-@Composable
-fun messageCard(msg:Message){
-    Column {
-        Text(text = msg.author)
-        Text(text = msg.body)
-    }
-}
-
-
-
-@Preview
-@Composable
-fun PreviewMessageCard(){
-    messageCard(
-        msg = Message("Alex", "Take a look at Jetpack COmpose")
-    )
 }
